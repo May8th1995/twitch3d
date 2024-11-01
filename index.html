@@ -20,7 +20,7 @@
         <style>
 
 :root {
-    --title-bar-height: 1.5rem;
+    --title-bar-height: 4rem;
     --corner-width: 1.2rem;
     --corner-edge-width: 0.4rem;
     --color-twitch: #9146FF;
@@ -501,7 +501,8 @@ body.still-cursor .window:not(.maximized-xAxis.maximized-yAxis):not(.iframe-enab
     position: relative;
 }
 .window-title-text {
-    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
     position: absolute;
     text-align: right;
     font-size: 0.9rem;
