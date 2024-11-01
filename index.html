@@ -482,7 +482,6 @@ body.still-cursor .window:not(.maximized-xAxis.maximized-yAxis):not(.iframe-enab
     height: 100%;
 }
 .window-title-bar {
-    background: var(--color-gray-3);
     position: absolute;
     top: 0;
     left: 0;
@@ -490,9 +489,6 @@ body.still-cursor .window:not(.maximized-xAxis.maximized-yAxis):not(.iframe-enab
     height: var(--title-bar-height);
     opacity: 1;
     transition: opacity cubic-bezier(0.33, 1, 0.68, 1) .3s;
-}
-.window:not(.in-move):not(.in-resize) .window-title-bar:not(:hover) {
-    opacity: 0;
 }
 .window-title-bar-relative,
 .window-title {
@@ -507,7 +503,7 @@ body.still-cursor .window:not(.maximized-xAxis.maximized-yAxis):not(.iframe-enab
 .window-title-text {
     color: white;
     position: absolute;
-    text-align: center;
+    text-align: right;
     font-size: 0.9rem;
     line-height: 1;
     top: 50%;
@@ -1305,7 +1301,6 @@ class Window {
 
         controls.appendChild(btnMaximize);
         controls.appendChild(btnClose);
-        titleBarRelative.appendChild(controls);
         titleBar.appendChild(titleBarRelative);
         relative.appendChild(titleBar);
         // Corners
