@@ -20,7 +20,7 @@
         <style>
 
 :root {
-    --title-bar-height: 4rem;
+    --title-bar-height: 1.5rem;
     --corner-width: 1.2rem;
     --corner-edge-width: 0.4rem;
     --color-twitch: #9146FF;
@@ -513,6 +513,7 @@ body.still-cursor .window:not(.maximized-xAxis.maximized-yAxis):not(.iframe-enab
     transform: translateY(-50%);
     user-select: none;
     -webkit-user-select: none;
+    white-space: pre;
 }
 .window-controls {
     display: flex;
@@ -1404,7 +1405,7 @@ class Window {
         return this.element.id;
     }
     setTitle(title/*: string*/) {
-        this.element.querySelector(".window-title-text").textContent = title;
+        this.element.querySelector(".window-title-text").textContent = title + "  ";
     }
     close() {
         for(const id1 of Object.keys(this.connectedTo)) {
@@ -2201,7 +2202,7 @@ class Window {
             s0.zIndex = s1.zIndex;
             s0.display = "block";
 
-            mr.querySelector(".window-title-text").textContent = mw.element.querySelector(".window-title-text").textContent;
+            mr.querySelector(".window-title-text").textContent = mw.element.querySelector(".window-title-text").textContent + "    ";
         }
     }
     static hideMaximizedRepresentation() {
